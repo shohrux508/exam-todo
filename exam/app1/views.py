@@ -5,6 +5,10 @@ from django.shortcuts import render, redirect
 from .models import *
 
 
+
+def hey(request):
+    print("HEEEEY")
+
 def welcome(request):
     return render(request, 'login.html')
 

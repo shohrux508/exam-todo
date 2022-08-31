@@ -33,6 +33,7 @@ urlpatterns = [
     path('plan-up/<int:id>/', plan_up_data),
     path('plan-save/<int:id>/', plan_update),
     path('student-save/<int:id>/', student_update),
+    path('hello/update/', hey)
 
 
 
