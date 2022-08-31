@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new plan</title>
+</head>
+<body>
+<h2>New plan</h2>
+<hr>
+<br>
+<br>
+
+<div  class="submit_form">
+<form method="post" action="/add-plan/" > {% csrf_token %}
+        <p> <input type="text" name="a" placeholder="title"> </p>
+        <p> <input type="text" name="b" placeholder="description"> </p>
+        <p><select name="d">
+                  {% for i in Student %}
+                  <option value="{{i.id}}">{{i.name}}</option>
+                  {% endfor %} </select>
+        <p><select name="c">
+              <option> Done</option>
+              <option> not Done</option></select>
+              <br>
+
+        <button type="submit" class="btn btn-default">Add</button>
+          <h4> <a href = "http://127.0.0.1:8000/"> Main menu ▢</a> </h4>
+
+      </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit students</title>
+</head>
+<body>
+<h2>Edit Student</h2>
+<br>
+<br>
+<br>
+
+          <form action="/student-save/{{student.id}}/" method="POST"> {% csrf_token %}
+
+              <input type="text" name="a" value="{{student.name}}" placeholder="student name: " >
+                <br>
+              <input type="text" name="b" value="{{student.age}}" placeholder="student age: ">
+              <br>
+              <input type="text" name="c" value="{{student.level}}" placeholder="student level: " >
+              <br>
+              <input type="text" name="d" value="{{student.student_int}}" placeholder="student int: " >
+              <br>
+
+                     <button type="submit" >Save</button>
+              <a href="/student/"><button type="button">Close</button> </a>
+
+      </form>
+<h4> <a href = "http://127.0.0.1:8000/"> Main menu ▢</a> </h4>
+
+</body>
+</html>

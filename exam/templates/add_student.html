@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new student</title>
+</head>
+<body>
+<style>
+    .block1 {
+    width: 400px;
+    margin: 100px; 300px;
+    border: 10px solid powderblue;
+    padding: 30px;
+    float: left;
+
+    }
+    .block2 {
+    width: 200px;
+    color: green;
+    }
+    .block3 {
+    width: 100px;
+    color: red;
+    border: 2px solid powderred;
+</style>
+<center>
+<h2 class="block2"> New student</h2>
+    </center>
+<hr>
+<br>
+<br>
+<div align="center" class="submit_form" >
+<form method="post" action="/add-student/" class="block1" > {% csrf_token %}
+    <center class="block2" > New student </center>
+        <p> <input type="text" name="a" placeholder="name"> </p>
+        <p> <input type="text" name="b" placeholder="age"> </p>
+        <p> <input type="text" name="c" placeholder="level"> </p>
+        <p> <input type="text" name="d" placeholder="student_id:" >
+            <hr>
+
+        <button type="submit" class="btn btn-default">Add</button>
+          <h4> <a href = "http://127.0.0.1:8000/"> Main menu ▢</a> </h4>
+
+      </form>
+    </div>
+</body>
+</html>

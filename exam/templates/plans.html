@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>students-actions</title>
+</head>
+<body>
+<h2> All  plans</h2>
+<a href="/add-plans/"> <button>Add plans </button></a>
+<hr>
+<br>
+<br>
+
+
+{% for i in Plans %}
+<h4>{{i.id}}.{{i.student}} </h4>
+<h5> {{i.title}} </h5>
+<h6>{{i.date}}</h6>
+
+<hr>
+<a href="/plan-up/{{i.id}}/"> <button>Edit </button> </a>
+<a href="/delete-plan/{{i.id}}/"> <button>Delete</button></a>
+
+
+{% endfor %}
+
+
+<h5>! eslatma bu yerda faqat rejasi bor studentlar ko'rsatiladi</h5>
+<h4> <a href = "http://127.0.0.1:8000/"> Main menu ▢</a> </h4>
+
+
+</body>
+</html>

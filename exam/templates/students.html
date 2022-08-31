@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+<h2> All Students </h2>
+<br>
+<a href="/add-student/"> <button>Add student </button></a>
+<hr>
+<br>
+<br>
+
+
+
+{% for i in Student%}
+
+<h4>{{i.id}}. {{i.name}} </h4>
+<h5>age: {{i.age}} </h5>
+<h6>position: {{i.student_int}}</h6>
+
+<hr>
+<a href="/student-up/{{i.id}}/"> <button>Edit </button> </a>
+<a href="/delete-student/{{i.id}}/"> <button>Delete</button></a>
+
+
+{% endfor %}
+
+
+<br>
+
+
+<h4> <a href = "http://127.0.0.1:8000/"> Main menu ▢</a> </h4>
+
+</body>
+</html>

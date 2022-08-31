@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit plans</title>
+</head>
+<body>
+
+          <form action="/plan-save/{{plan.id}}/" method="POST"> {% csrf_token %}
+              <select name="d" placeholder="choose Student">
+                  {% for i in Student %}
+                  <option value="{{i.id}}">{{i.name}}</option>
+                  {% endfor %} </select>
+              <br>
+              <input type="text" name="a" value="{{plan.title}}" placeholder="student name: " >
+                <br>
+              <input type="text" name="b" value="{{plan.description}}" placeholder="student age: ">
+              <br>
+              <h4> {{plan.status}} </h4>
+              <p><select name="c" value="{{plan.status}}" >
+          <option> Done</option>
+          <option> not Done</option></select>
+              <br>
+
+                     <button type="submit" >Save</button>
+              <a href="/student/"><button type="button">Close</button> </a>
+
+      </form>
+
+
+<h4> <a href = "http://127.0.0.1:8000/"> Main menu ▢</a> </h4>
+</body>
+</html>
